@@ -511,12 +511,27 @@ nav {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  img {
+  .himg{
+    @include flex();
+    position: relative;
+      z-index: 2;
+
+  }
+  .i {
     position: relative;
     width: 300px;
     object-fit: contain;
-    z-index: 2;
+  
     animation: moveAndScale 5s infinite linear;
+    z-index: 2;
+    
+  }
+  .i2{
+    width: 650px;
+    position: absolute;
+    right: calc(-200px);
+    top: calc(100% - 400px);
+    z-index: 1;
   }
 
   @keyframes moveAndScale {
@@ -562,7 +577,7 @@ nav {
     }
   }
   .homedata {
-    img {
+    .i {
       width: 250px;
     }
   }
@@ -571,7 +586,7 @@ nav {
   .homedata {
     padding-top: 90px;
     justify-content: center;
-    img {
+    .i {
       width: 250px;
     }
   }
@@ -580,7 +595,7 @@ nav {
   .homedata {
     padding-top: 90px;
     justify-content: center;
-    img {
+    .i {
       width: 80%;
     }
   }
